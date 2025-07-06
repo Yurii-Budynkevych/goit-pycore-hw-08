@@ -79,7 +79,7 @@ class AddressBook(UserDict):
         self.data[record.name.get_value()] = record
 
     def find(self, record_name):
-        return self.data.get(record_name)
+        return self.data.get(record_name.lower().capitalize())
     
     def show_records_birthdays(self):
         birthday_list = []
